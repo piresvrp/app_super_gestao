@@ -1,0 +1,24 @@
+@if(!($fornecedores[0]['status'] == "S"))
+    fornecedor inativo
+@endif
+<br>
+@unless($fornecedores[0]['status'] == "S")
+    fornecedor inativo
+@endunless
+
+
+
+
+@isset($fornecedores)
+    @foreach($fornecedores as $fornecedor)
+        <br>
+        Fornecedor: {{ $fornecedor['nome'] }}
+        <br>
+        Status: {{ $fornecedor['status'] }}
+        <br>
+        CNPJ: {{ !empty($fornecedor['cnpj']) ? $fornecedor['cnpj'] : 'VAZIO' }}
+        <hr>
+    @endforeach
+@endisset
+
+
