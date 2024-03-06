@@ -8,6 +8,7 @@ class SobreNosController extends Controller
 {
     public function sobrenos()
     {
-        return view('site.sobre-nos');
+        $data['titulo'] = "Sobre nós";
+        return view('site.sobre-nos', $data);
     }
 }
