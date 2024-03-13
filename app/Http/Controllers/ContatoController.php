@@ -10,6 +10,6 @@ class ContatoController extends Controller
     {
         var_dump($_GET);
         $data['titulo'] = "Contato";
-       return view('site.contato', $data);
+        return view('site.contato', $data);
     }
 }
