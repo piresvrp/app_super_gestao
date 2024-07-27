@@ -1,0 +1,27 @@
+composer create-project --prefer-dist laravel/laravel:^7.0 blog
+---
+PHP ARTISAN SERVE --PORT=9000
+PHP ARTISAN DOWN
+PHP ARTISAN UP
+php artisan make::controller PrincipalController
+php artisan view:clear
+php artisan make:model
+
+php -r "var_dump(extension_loaded('pdo_mysql'));"
+php artisan make:migration create_users_table
+
+php artisan migrate:rollback
+php artisan migrate:rollback --step=2
+ $table->foreign('produto_id')->references('id')->on('produtos');
+
+ status, reset, refresh, fresh
+
+ php artisan migrate:reset;
+ php artisan migrate:reset;
+ php artisan migrate:refresh;
+
+
+=======================================================================================
+DOCKER COLOCANDO SERVICO PHP
+=======================================================================================
+docker-compose exec web /bin/sh
