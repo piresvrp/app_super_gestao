@@ -18,6 +18,8 @@ Route::get('/contato', 'ContatoController@contato')->name("site.contato");
 Route::post('/contato', 'ContatoController@contato')->name("site.contato");
 
 
+
+
 Route::prefix('/app')->group(function (){
     Route::get('/login', function (){return 'login';})->name("app.login");
     Route::get('/clientes', function (){return 'clientes';})->name("app.clientes");
